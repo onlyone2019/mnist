@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
+project(train-mnist)
+set(Torch_DIR "/path/to/libtorch/share/cmake/Torch/")
+find_package(Torch REQUIRED PATHS "/path/to/libtorch/share/cmake/Torch/")
+add_executable(mnist_cnn_gpu train.cpp)
+target_link_libraries(mnist_cnn_gpu "${TORCH_LIBRARIES}")
+set_property(TARGET mnist_cnn_gpu PROPERTY CXX_STANDARD 11)
