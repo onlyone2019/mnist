@@ -39,3 +39,5 @@ cd <repo>/build
 or
 ./detect ../data/image.png ../checkpoint/model_best.pth
 ```
+
+[参考](https://github.com/Lornatang/MNIST-LibTorch)
